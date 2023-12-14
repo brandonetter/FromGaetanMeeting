@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import Popups from './components/Popups'
 import { PopupProvider } from './context/PopupProvider'
+import { getStream } from './actions/stream.action'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -18,7 +19,7 @@ export default function RootLayout({children,modal}: { children: React.ReactNode
       <body className={inter.className}>
         <PopupProvider>
         {children}
-        <Popups/>
+        <Popups serverFetch={getStream}/>
         </PopupProvider>
         </body>
 

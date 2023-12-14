@@ -1,9 +1,8 @@
 export default async function Checkout () {
-
-    console.log('checkout',process.env.npm_node_execpath);
+  await new Promise((res)=>setTimeout(res,400));
     return (
-      <div className="absolute top-0 h-full w-full bg-black/20">
-        <div className="w-1/3 bg-white text-black">
+      <div className="absolute top-0 flex justify-center items-center h-screen w-screen bg-black/20">
+        <div className="w-1/3 h-64 rounded-lg bg-white text-black">
           <h1>Checkout</h1>
         </div>
       </div>
